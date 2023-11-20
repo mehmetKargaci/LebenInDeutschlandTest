@@ -31,15 +31,15 @@ class ViewController: UIViewController {
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        let userAnswer = sender.currentTitle! //a,b,c,d
-        let userGotItRight = modelBrain.checkAnswer(userAnswer)
-
-        
-        if userGotItRight {
-            sender.backgroundColor = UIColor.green
-        } else {
-            sender.backgroundColor = UIColor.red
-        }
+//        let userAnswer = sender.currentTitle! //a,b,c,d
+//        let userGotItRight = modelBrain.checkAnswer(userAnswer)
+//
+//        
+//        if userGotItRight {
+//            sender.backgroundColor = UIColor.green
+//        } else {
+//            sender.backgroundColor = UIColor.red
+//        }
         
         modelBrain.nextQuestion()
         
@@ -50,19 +50,19 @@ class ViewController: UIViewController {
     @objc func updateUI() {
         questionLabel.text = modelBrain.getQuestionText()
         
-        let answerChoices = modelBrain.getAnswers()
-        answerA.setTitle(answerChoices[0], for: .normal)
-        answerB.setTitle(answerChoices[1], for: .normal)
-        answerC.setTitle(answerChoices[2], for: .normal)
-        answerD.setTitle(answerChoices[3], for: .normal)
+//        let answerChoices = modelBrain.getAnswers()
+//        answerA.setTitle(answerChoices[0], for: .normal)
+//        answerB.setTitle(answerChoices[1], for: .normal)
+//        answerC.setTitle(answerChoices[2], for: .normal)
+//        answerD.setTitle(answerChoices[3], for: .normal)
+//        
+//        answerA.backgroundColor = UIColor.clear
+//        answerB.backgroundColor = UIColor.clear
+//        answerC.backgroundColor = UIColor.clear
+//        answerD.backgroundColor = UIColor.clear
         
-        answerA.backgroundColor = UIColor.clear
-        answerB.backgroundColor = UIColor.clear
-        answerC.backgroundColor = UIColor.clear
-        answerD.backgroundColor = UIColor.clear
-        
-        progressBar.progress = modelBrain.getProgres()
-        scoreLabel.text = "Score: \(modelBrain.getScore())"
+//        progressBar.progress = modelBrain.getProgres()
+//        scoreLabel.text = "Score: \(modelBrain.getScore())"
         
         
     }
